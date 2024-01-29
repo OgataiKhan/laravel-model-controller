@@ -12,27 +12,30 @@
 </head>
 
 <body>
-    <h1>Ciao</h1>
-    <div class="container">
-        <ul class="row gy-4">
-            @foreach ($movies as $movie)
-                {{-- <li class="col-3">{{ $movie->title }} - {{ $movie->original_title }}</li> --}}
-                <li class="col-3">
-                    <div class="card text-center" style="width: 18rem;">
-                        <div class="card-header">
-                            {{ $movie->title }}
+    <header>
+        <h1>Ciao</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row g-4">
+                @foreach ($movies as $movie)
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex align-items-stretch">
+                        <div class="card text-center w-100">
+                            <h4 class="card-header">
+                                {{ $movie->title }}
+                            </h4>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item fw-lighter fst-italic">{{ $movie->original_title }}</li>
+                                <li class="list-group-item">Nationality: {{ $movie->nationality }}</li>
+                                <li class="list-group-item">Release date: {{ $movie->date }}</li>
+                                <li class="list-group-item">Vote: {{ $movie->vote }}</li>
+                            </ul>
                         </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">{{ $movie->original_title }}</li>
-                            <li class="list-group-item">Nationality: {{ $movie->nationality }}</li>
-                            <li class="list-group-item">Release date: {{ $movie->date }}</li>
-                            <li class="list-group-item">Vote: {{ $movie->vote }}</li>
-                        </ul>
                     </div>
-                </li>
-            @endforeach
-        </ul>
-    </div>
+                @endforeach
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>

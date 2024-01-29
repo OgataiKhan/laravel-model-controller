@@ -1,9 +1,26 @@
 @import "~bootstrap/scss/bootstrap";
 
 body {
-  background-color: green;
+  background-color: #121415;
+  color: #FFFFFF;
 }
 
 ul {
   list-style: none;
+}
+
+.card,
+.list-group,
+.list-group-item {
+  background-color: #323232;
+  color: #FFFFFF;
+}
+
+.list-group-item {
+  border: none;
+}
+
+.card-header {
+  background-color: #E50914;
+  border: none;
 }
