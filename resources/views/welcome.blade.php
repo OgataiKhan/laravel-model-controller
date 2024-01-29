@@ -12,10 +12,12 @@
 </head>
 
 <body>
-    <header>
-        <h1>Ciao</h1>
+    <header class="py-4">
+        <div class="logo ms-4">
+            <img src="{{ Vite::asset('resources/img/boolflix-logo.webp') }}" alt="Boolflix logo">
+        </div>
     </header>
-    <main>
+    <main class="my-4">
         <div class="container">
             <div class="row g-4">
                 @foreach ($movies as $movie)

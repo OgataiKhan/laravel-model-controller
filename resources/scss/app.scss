@@ -5,8 +5,18 @@ body {
   color: #FFFFFF;
 }
 
+img {
+  width: 100%;
+  display: block;
+}
+
 ul {
   list-style: none;
+}
+
+.logo {
+  max-width: 200px;
+  min-width: 100px;
 }
 
 .card,
